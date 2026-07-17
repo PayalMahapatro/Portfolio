@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study — Payal Mahapatro</title>
+  <meta name="theme-color" content="#FAFAF8" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      if (theme === 'dark') document.documentElement.classList.add('dark');
+    })();
+  </script>
+</head>
+<body>
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <header class="navbar scrolled">
+    <div class="container">
+      <a href="index.html" class="nav-logo">Payal Mahapatro</a>
+      <ul class="nav-links">
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <span class="knob"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="caseStudyRoot"></main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p id="footerNote"></p>
+      <div class="footer-links" id="footerLinks"></div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/case-study.js"></script>
+</body>
+</html>
